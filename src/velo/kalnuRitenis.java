@@ -3,13 +3,13 @@ package velo;
 public class kalnuRitenis extends Velosipeds {
  //atributi
 	private int iestatitAtrumu;
-	private boolean atstarpes;
+	private boolean atsperes;
 	
-		public kalnuRitenis(double ritenaD, int sedeklaPoz, double cena, 
+		public kalnuRitenis(int iestatitAtrumu, boolean atsperes, double ritenaD, int sedeklaPoz, double cena, 
 			String razotajs, String cels) {
 		super(ritenaD, sedeklaPoz, cena, razotajs, cels);
 		this.iestatitAtrumu = iestatitAtrumu;
-		this.atstarpes = atstarpes;
+		this.atsperes = atsperes;
 		
 	}
 		
@@ -20,6 +20,19 @@ public class kalnuRitenis extends Velosipeds {
 		
 		public void parslegtAtrumu(int atr) {
 			iestatitAtrumu = atr;
+		}
+		
+		public String izvadit() {
+			return "Riteņa ražotājs: "+noteiktRazotaju()
+			+"\nRiteņa cena: "+noteiktCenu()+ "EUR\n"
+			+"Riteņa lielums coilās: "+noteiktDiametru()
+			+"\nSēdekļa pozīcijas: "+noteiktSedPoz()
+			+"\nKustības ātrums: "+noteiktKustibasAtrumu()+"m/s\n"
+			+"\nIestatītais ātrums: "+noteiktAtrumu()
+			+"\nPapildus amortizācija: "+((atsperes) ? "Ir" : "Nav")+"\n";
+			
+			
+
 		}
 }
 		
