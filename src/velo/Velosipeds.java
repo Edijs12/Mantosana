@@ -36,16 +36,10 @@ public class Velosipeds {
 		if(!cels.endsWith(".png"))
 			cels += ".png";
 		
-		URL resurss = getClass().getResource("/atteli/"+cels);
-		if(resurss != null)
-		return new ImageIcon(new ImageIcon(resurss).getImage().getScaledInstance(100, 100, Image.SCALE_SMOOTH));
-		
-		
-		else {
-			JOptionPane.showMessageDialog(null,  "Nevar atrast bildi: "+cels, "Bridinajums",
-					JOptionPane.WARNING_MESSAGE);
-			return null;
-		}
+	//	URL resurss = getClass().getResource(cels);
+
+		return new ImageIcon(new ImageIcon(cels).getImage().
+				getScaledInstance(100, 100, Image.SCALE_SMOOTH));
 	}
 	
 	public ImageIcon apskatitBildi() {
